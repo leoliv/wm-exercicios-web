@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Trabalhando com Eventos #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <!-- Não pode set outro parâmentro, tem que ser event mesmo -->
+        <!-- onclick="navegarEm5s(event)" -->
+        <!-- Se você colocar um atributo personalizado, quer dizer que você vai usar apartir do javascript -->
+        <a espera-um-pouco href="https://google.com.br" >Google</a>
+    </div>
+    <script>
+        // navegar para o google só depois de 5 segundos
+        function navegarEm5s(e) {
+            e.preventDefault()
+            console.log('Saindo em 5 segundos...')
+            setTimeout(() => {
+                const link = e.target
+                window.location.href = link.href
+            }, 5000)
+        }
+
+        // const a = document.querySelector('a')
+        // a.onclick = navegarEm5s
+
+        // pode ser usado um atributo personalizado para presumir que você está mexendo com o link
+        const a = document.querySelector('[espera-um-pouco]')
+        a.onclick = navegarEm5s
+    </script>
+</body>

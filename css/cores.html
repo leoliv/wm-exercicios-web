@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cores</title>
+    <style>
+        /* 
+            https://www.w3schools.com/colors/colors_hsl.asp
+            
+            https://coolors.co/
+            http://paletton.com/
+        */
+
+        body {
+            /* O nome da cor */
+            background-color: green;
+            /* Valores de cores hexadecimal: Ela é dividida em três partes. Primeira parte é vermelho, Segunda parte é o verde e Terceira parte é azul. Todas as partes vai de 0 até FF. São 16 caracteres de 0 até F: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F] */
+            background-color: #f67809;
+            /* Você também pode simplificar já que a primeira parte se repete o caractere e assim por diante =>  #aabbcc para #abc*/
+            background-color: #abc;
+            /* Outra possibilidade com hexadecimal é a inclusão de uma 4ª parte de cores que é a transparência */
+            background-color: #edc912ff;
+            /* Você pode também trabalhar com apenas 4 caracteres, no caso, a transparencia sendo o último */
+            background-color: #e928;
+            /* Você pode usar função que é o RGB na base decimal de 0 a 255 */
+            background-color: rgb(55, 110, 220);
+            /* Temos também o RGBA, no caso, a transparencia no final */
+            /* 1.0 quer dizer que não tem transparencia; 0.5 quer dizer que quer 50% da transparencia */
+            background-color: rgba(55, 110, 220, .5);
+            /* hue, saturation e lightness */
+            /*  heu: 0 a 260
+                saturation: 0 a 100
+                lightness: 0 a 50 => 0 branco e 50% a cor pura
+            */
+            background-color: hsl(299, 58%, 50%);
+            /* Também tem o HSLA que o quarto parâmetro é a transparencia */
+            background-color: HSLA(299, 58%, 50%, .5);
+
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

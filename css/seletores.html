@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Selectors</title>
+    <link rel="stylesheet" href="css/tag.css">
+    <style>
+        /* vai pegar todos
+        * {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* vai pegar os seletores-classes
+        .tag {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* vai pegar os seletores-id 
+        #aprovados {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* vai pegar o filho direto
+        #aninhado > div {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* vai pegar o decendente de aninhado
+        #aninhado section {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* vai pegar o adjacente, no caso, o ul está próximo ao p
+        p + ul {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* vai pegar os irmãos de forma mais geral, e não necessariamente do lado
+        p ~ ol {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* vai pegar todos com o atributo
+        [feira] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* vai pegar todos com o atributo que tenha o valor...
+        [feira=casa] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* vai pegar todos com o atributo que tenha o valor com espaço...
+        Os espaços é importante para definir os valores dentro de uma propriedade
+
+        [feira~=escritorio] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* vai pegar todos com o atributo que tenha todos os valores com o texto
+        [feira*=sa] {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* Pegar o primeiro filho de alguém que seja do tipo span
+        span:nth-child(1) {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* Pegar apenas os filhos ímpares de section
+        section > :nth-child(odd) {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* Pegar apenas os filhos pares de section
+        section > :nth-child(even) {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* Vai aplicar não só no section, mas também na ul
+        section > :nth-child(1), ul {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        /* Dentro de section vai pegar apenas o segundo elemento do tipo span
+        section > span:nth-of-type(2){
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+        
+    </style>
+</head>
+
+<body>
+    <div class='tag'>
+        <div class='tag'>
+            <p class='tag'>1</p>
+            <ul class='tag' feira='casa'>
+                <li>Arroz</li>
+                <li>Feijão</li>
+            </ul>
+            <ul class='tag' feira='escritorio empresa'>
+                <li>Café</li>
+                <li>Água</li>
+            </ul>
+            <ol id='aprovados' class='tag'>
+                <li>Maria</li>
+                <li>Pedro</li>
+                <li>Ana</li>
+            </ol>
+            <div id='aninhado' class='tag'>
+                <div class="tag">
+                    <section class='tag nolabel'>
+                        <span class='tag'>1</span>
+                        <p class='tag'>2</p>
+                        <span class='tag'>3</span>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/tag.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model</title>
+    <style>
+        body {
+            margin: 0px;
+            font-size: 40px;
+        }
+        .c1 {
+            background-color: orange;
+        }
+        .c2 {
+            background-color: skyblue;
+        }
+        .c3 {
+            background-color: tomato;
+        }
+
+        div {
+            /* faz os componentes cairem para a esquerda. Bem parecido com display: inline */
+            float: left;
+            /* padding apenas em cima */
+            padding-top: 100px;
+            /* padding no sentido horário: top, right, bottom, left */
+            padding: 10px 50px 100px 150px;
+            /* padding top, bottom e right, left */
+            padding: 100px 50px;
+            /* padding em todos os lados */
+            padding: 50px;
+
+            /* margin leva os mesmos conceitos de aplicação do padding */
+            margin: 0px 20px;
+            border: solid 15px black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="c1">1</div>
+    <div class="c2">2</div>
+    <div class="c3">3</div>
+</body>
+
+</html>

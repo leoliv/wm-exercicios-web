@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #04</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body class="conteudo exercicio">
+    <div>
+        <p>Início</p>
+    </div>
+    <div>
+        <ul>
+            <li>Pedro</li>
+            <li>Ana</li>
+            <li>Bia</li>
+        </ul>
+    </div>
+    <div>
+        <p>Fim</p>
+    </div>
+    <script>
+        function log() {
+            console.log(this)
+        }
+
+        HTMLCollection.prototype.log = log
+        HTMLElement.prototype.log = log
+        NodeList.prototype.log = log
+        Node.prototype.log = log
+
+        const lista = document.querySelector('div ul')
+        /* vai pegar o pai */
+        lista.parentNode.log()
+        /* Os childNodes vai trazer os espaços com ele */
+        lista.childNodes.log()
+
+        /* Vai pegar o primeiro elemento da lista vai ser do tipo text */
+        const primeiro = lista.firstChild
+        primeiro.log()
+        /* vai pegar o irmão do espaço (primeiro elemento), vai ser o li */
+        primeiro.nextSibling.log()
+
+        /* vai pegar o último, no caso o text (espaços) */
+        const ultimo = lista.lastChild
+        ultimo.log()
+        /* vai pegar o anterior ao ultimo elemento */
+        ultimo.previousSibling.log()
+
+        // Agora com HTMLCollection
+        lista.children.log()
+        // vai pegar o primeiro elemento, de fato, li
+        lista.firstElementChild.log()
+        lista.lastElementChild.log()
+
+        // vai pegar os elementos anteriores
+        lista.parentNode.previousElementSibling.log()
+        lista.parentNode.nextElementSibling.log()
+
+        // Em vez de ficar pesquisando "primeiro elemento", o ideal é selecionar com querySelectorAll
+        // via de regra é melhor pegar aquilo que você quer que pode ser mais interessante.
+        document.querySelectorAll('div ul li').log()
+    </script>
+</body>
+
+</html>

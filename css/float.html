@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Float</title>
+    <style>
+        body {
+            background-color: #222;
+        }
+
+        .c1 {
+            background-color: red;
+            /* A div vai flutuar para a esquerda e os outros elementos ocuparam o seu espaço anteriormente */
+            float: right;
+        }
+
+        /* Para corrigir a ocupação de espaço de um elemento em cima de outro que tem o float, usa-se clear */
+
+        .c2 {
+            background-color: green;
+            clear: right;
+        }
+        
+        .c3 {
+            background-color: blue;
+            float: right;
+        }
+
+        .c4 {
+            background-color: orange;
+            clear: right;
+        }
+
+        div {
+            height: 100px;
+            width: 100px;
+            /* o float: right vai pegar os primeiros elementos da esquerda e colocar na direita */
+            /* float: left; */
+        }
+
+        /* DICA!
+            O flex-box é mais interessante do que o float hoje em dia.
+        */
+    </style>
+</head>
+
+<body>
+    <div class="c1"></div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+    <div class="c4"></div>
+</body>
+
+</html>

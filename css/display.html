@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Display</title>
+    <style>
+        body {
+            font-size: 40px;
+            color: #fff;
+            background-color: coral;
+        }
+
+        ul { padding: 0px; }
+        div { background-color: seagreen; }
+        span { background-color: dodgerblue; }
+        li { background-color: purple; }
+
+        div, span, li {
+            /* Valor percentual; relativa que vai ocupar metade da tela */
+            width: 50%;
+            /* Valor absuluta */
+            width: 200px;
+            height: 80px;
+            padding-top: 30px;
+            /* alinhar os texto dentro do padding (na caixa) */
+            text-align: center;
+            /* Display: block -> cada elemento vai ter sua propria linha */
+            display: block;
+            /* Display: inline -> vai tá na mesma linha, a não ser o ul que vai dá uma quebra de linha */
+            /* A altura e a largura não serão considerados quando está no display inline */
+            display: inline;
+            /* Para considerar a altura e largura com inline */
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div>Texto 1</div>
+    <span>Texto 2</span>
+    <span>Texto 3</span>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+</body>
+
+</html>

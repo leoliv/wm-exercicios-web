@@ -1,0 +1,39 @@
+- Primeiro para iniciar o progeto que criará o arquivo package.json
+npm init (para pediar as informações manualmente) (-y (execultaar de uma vez))
+
+Existe formas de adicionar uma versão de uma dependencia
+npm i (install) --save axios
+
+dentro da pasta node_modules será colocada a dependencia baixada
+
+No arquivo package.json irá ser adicionada a linha referenta a dependencia
+
+"dependencies": {
+    "axios": "^0.22.0" => o '^' vai permitir apenas que o miners miner seja atualizado xx.22.xx
+  }
+
+"dependencies": {
+    "axios": "~0.22.0" => o '~' vai permitir apenas os numeros xx.xx.0 serão atualizados
+  }
+
+E o arquivo package-lock.json deve ser enviado ao seu repositorio pq tem informações precisas de dependencias
+
+Para instalar as dependencias no projeto inicial, sem ser na forma global
+npm install --save dependencia
+
+Para instalar as dependencias para desenvolvimento
+npm install --save-dev dependencia
+
+para instalar as dependencias de forma global
+npm install -g dependencia
+
+Para instalar as dependencias apenas com o 'package.json' como referência
+npm i (install)
+
+Apartir do comando 'npm start' no terminal, dá pra rodar o script dentro do package.json
+npm start e test é um comando padrão do node
+
+Para executar o 'dev' é
+npm run dev
+
+// No site docs.npmjs.com/misc/scripts você vai ver alguns scripts pré-definidos

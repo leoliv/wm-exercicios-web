@@ -1,0 +1,109 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #c7c7c7;
+}
+
+.cabecalho {
+    position: relative;
+    display: block;
+    background-color: #222;
+    height: 60px;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    box-shadow: 0px 3px 0px 0px #35a0ca;
+}
+
+.logo {
+    display: inline-block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu-toggle {
+    display: none;
+    float: right;
+    margin-top: 23px;
+    margin-right: 20px;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 26%;
+    left: 250px;
+}
+
+.menu li {
+    display: inline;
+    list-style-type: none;
+}
+
+.menu a {
+    border-radius: 3px;
+    padding: 8px 10px;
+}
+
+.menu a:hover {
+    background: #35a0ca;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: #f3f3f3;
+}
+
+.autenticacao {
+    display: none;
+    float: right;
+    margin: 16px 10px;
+}
+
+.autenticacao> :nth-child(1) {
+    padding-right: 10px;
+}
+
+.autenticacao> :nth-child(1):hover {
+    color: #35a0ca;
+}
+
+.botao {
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.destaque {
+    background: tomato;
+}
+
+.destaque:hover {
+    background-color: #35a0ca;
+}
+
+@media (min-width: 720px) {
+    .autenticacao {
+        display: block;
+    }
+}
+
+@media (min-width: 535px) {
+    .menu {
+        display: block;
+    }
+}
+
+@media (max-width: 534px) {
+    .menu-toggle {
+        display: block;
+    }
+}

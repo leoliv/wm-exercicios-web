@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Media Query</title>
+    <style>
+        div {
+            font-size: 40px;
+            margin: 20px;
+            padding: 20px;
+            background-color: coral;
+            border: solid 5px;
+            display: none;
+        }
+
+        /* Para fazer sites responsivos */
+        /* Só vai aparecer de 600px para baixo */
+        @media (max-width: 600px) {
+            .muito-pequeno {
+                display: block;
+            }
+        }
+
+        /* Para fazer sites responsivos e quando a orientação for do tipo retrato */
+        /* Também pode ser interpetrado como um 'OU'. */
+        @media (max-width: 1000px), (orientation: portrait) {
+            .pequeno-retrato {
+                display: block;
+            }
+        }
+
+        /* Só vai aparecer de 500px para cima */
+        /* Os dois tem que ser verdadeiro para ser aplicado */
+        @media (min-width: 500px) and (max-width: 1000px) {
+            .intervalo {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="muito-pequeno">Muito Pequeno</div>
+    <div class="pequeno-retrato">Pequeno ou Retrato</div>
+    <div class="intervalo">Intervalo</div>
+</body>
+</html>
